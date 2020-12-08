@@ -1,0 +1,16 @@
+<h3>Add Student Form</h3>
+<form>
+    Student Rollno:-<input type="text" name="id" [(ngModel)]="id"><br>
+    Student Name:- <input type="text" name="name" [(ngModel)]="name"><br>
+    Student Marks:-<input type="text" name="marks" [(ngModel)]="marks"><br>
+    Student DOB:- <input type="date" name="dob" [(ngModel)]="dob"><br>
+    <div *ngIf="!id">
+        <button type="submit"(click)="addStudent()" >Add Student</button><br>
+    </div>
+    <div *ngIf="id">
+        <button type="submit"(click)="UpdateStudent()" >update Student</button><br>
+    </div>
+  
+    
+</form>
+

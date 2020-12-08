@@ -1,0 +1,30 @@
+<div class="myclass">
+    <div class="myclass1">
+        <table border="2">
+            <tr>
+                <th>Roll Number</th>
+                <th>Name</th>
+                <th>Marks</th>
+                <th>DOB</th>
+            </tr>
+            <tr *ngFor="let student of sarr">
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.marks}}</td>
+                <td>{{student.dob}}</td>
+                <td>
+                    <a (click)="updateStudent(student)">edit</a>|
+                    <a (click)="deleteStudent(student)">delete</a>
+                </td>
+
+            </tr>
+        </table>
+   
+    <div>
+        <button type="button" name="btn"  (click)="displayForm()">Add Student</button>
+    </div>
+</div>
+    <div *ngIf="flag" class="myclass2">
+        <stud-form (myevent)="sarr=$event" [addstud]="addflag" [updatestud]="stud"  (flagEvent)="flag=$event"></stud-form>
+    </div>
+</div>
